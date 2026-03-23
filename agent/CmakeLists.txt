@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(AgenteRemoto LANGUAGES CXX)
+
+# Habilita C++17
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+# Agrega tu ejecutable (puede ser main.cpp o el que uses)
+add_executable(agente main.cpp)
+
+# Incluye las rutas necesarias si usas Crow de forma local
+target_include_directories(agente PRIVATE ${CMAKE_SOURCE_DIR}/include)
+
+# Agrega dependencias si usas alguna (ejemplo: pthread si estás en Linux)
+# target_link_libraries(agente pthread)

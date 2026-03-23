@@ -1,0 +1,222 @@
+﻿  agent.cpp
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+C:\vcpkg\installed\x64-windows\include\crow\http_parser_merged.h(587,32): warning C4244: '=': conversión de '__int64' a 'unsigned long'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\http_parser_merged.h(607,32): warning C4244: '=': conversión de '__int64' a 'unsigned long'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\json.h(1267,35): warning C4267: 'argumento': conversión de 'size_t' a 'uint32_t'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\json.h(1749,32): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\mustache.h(180,33): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\mustache.h(199,48): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\mustache.h(201,53): warning C4267: 'argumento': conversión de 'size_t' a '_Ty'; posible pérdida de datos
+C:\vcpkg\installed\x64-windows\include\crow\mustache.h(201,53): warning C4267:         with
+C:\vcpkg\installed\x64-windows\include\crow\mustache.h(201,53): warning C4267:         [
+C:\vcpkg\installed\x64-windows\include\crow\mustache.h(201,53): warning C4267:             _Ty=int
+C:\vcpkg\installed\x64-windows\include\crow\mustache.h(201,53): warning C4267:         ]
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\mustache.h(302,94): warning C4267: 'argumento': conversión de 'size_t' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\mustache.h(450,54): warning C4267: 'argumento': conversión de 'size_t' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\mustache.h(461,54): warning C4267: 'argumento': conversión de 'size_t' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\mustache.h(479,54): warning C4267: 'argumento': conversión de 'size_t' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\mustache.h(490,54): warning C4267: 'argumento': conversión de 'size_t' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(782,74): warning C4566: el carácter representado por el nombre de carácter universal '\u2514' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(782,74): warning C4566: el carácter representado por el nombre de carácter universal '\u279D' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(786,74): warning C4566: el carácter representado por el nombre de carácter universal '\u2514' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(786,74): warning C4566: el carácter representado por el nombre de carácter universal '\u279D' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(790,74): warning C4566: el carácter representado por el nombre de carácter universal '\u2514' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(790,74): warning C4566: el carácter representado por el nombre de carácter universal '\u279D' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(794,74): warning C4566: el carácter representado por el nombre de carácter universal '\u2514' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(794,74): warning C4566: el carácter representado por el nombre de carácter universal '\u279D' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(798,74): warning C4566: el carácter representado por el nombre de carácter universal '\u2514' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(798,74): warning C4566: el carácter representado por el nombre de carácter universal '\u279D' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(802,74): warning C4566: el carácter representado por el nombre de carácter universal '\u2514' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(802,74): warning C4566: el carácter representado por el nombre de carácter universal '\u279D' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(808,66): warning C4566: el carácter representado por el nombre de carácter universal '\u2514' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(808,66): warning C4566: el carácter representado por el nombre de carácter universal '\u279D' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(819,31): warning C4566: el carácter representado por el nombre de carácter universal '\u2514' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(819,31): warning C4566: el carácter representado por el nombre de carácter universal '\u2799' no se puede representar en la página de códigos actual (1252)
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(882,70): warning C4244: 'argumento': conversión de '__int64' a 'unsigned int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(903,70): warning C4244: 'argumento': conversión de '__int64' a 'unsigned int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(924,70): warning C4244: 'argumento': conversión de '__int64' a 'unsigned int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(946,61): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(962,61): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(977,61): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(1032,53): warning C4267: '+=': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(1043,45): warning C4267: '+=': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(1296,101): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(1296,87): warning C4267: 'argumento': conversión de 'size_t' a 'uint16_t'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(1302,118): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(1363,111): warning C4267: 'argumento': conversión de 'size_t' a 'unsigned int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\routing.h(1508,24): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+  
+C:\vcpkg\installed\x64-windows\include\crow\http_server.h(237,37): warning C4267: '=': conversión de 'size_t' a 'uint16_t'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+      C:\vcpkg\installed\x64-windows\include\crow\http_server.h(237,37):
+      el contexto de creación de instancias de la plantilla (el más antiguo primero) es
+          C:\Users\ADMIN\source\repos\agent\agent\agent.cpp(127,21):
+          Vea la referencia a la creación de una instancia de clase plantilla "crow::Crow<>" que se está compilando
+          C:\vcpkg\installed\x64-windows\include\crow\app.h(501,14):
+          al compilar la función del miembro clase plantilla "void crow::Crow<>::run(void)"
+              C:\Users\ADMIN\source\repos\agent\agent\agent.cpp(192,58):
+              vea la primera referencia a “crow::Crow<>::run” en “Agent::startAgent”
+          C:\vcpkg\installed\x64-windows\include\crow\app.h(534,26):
+          Vea la referencia a la creación de una instancia de clase plantilla "crow::Server<crow::Crow<>,crow::SocketAdaptor>" que se está compilando
+          C:\vcpkg\installed\x64-windows\include\crow\http_server.h(226,18):
+          al compilar la función del miembro clase plantilla "uint16_t crow::Server<crow::Crow<>,crow::SocketAdaptor>::pick_io_context_idx(void)"
+              C:\vcpkg\installed\x64-windows\include\crow\http_server.h(246,38):
+              vea la primera referencia a “crow::Server<crow::Crow<>,crow::SocketAdaptor>::pick_io_context_idx” en “crow::Server<crow::Crow<>,crow::SocketAdaptor>::do_accept”
+              C:\vcpkg\installed\x64-windows\include\crow\http_server.h(173,22):
+              vea la primera referencia a “crow::Server<crow::Crow<>,crow::SocketAdaptor>::do_accept” en “crow::Server<crow::Crow<>,crow::SocketAdaptor>::run”
+              C:\vcpkg\installed\x64-windows\include\crow\app.h(540,29):
+              vea la primera referencia a “crow::Server<crow::Crow<>,crow::SocketAdaptor>::run” en “crow::Crow<>::run”
+              C:\Users\ADMIN\source\repos\agent\agent\agent.cpp(192,58):
+              vea la primera referencia a “crow::Crow<>::run” en “Agent::startAgent”
+  
+C:\vcpkg\installed\x64-windows\include\crow\http_connection.h(479,75): warning C4244: 'argumento': conversión de 'unsigned __int64' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+      C:\vcpkg\installed\x64-windows\include\crow\http_connection.h(479,75):
+      el contexto de creación de instancias de la plantilla (el más antiguo primero) es
+          C:\vcpkg\installed\x64-windows\include\crow\http_server.h(242,14):
+          al compilar la función del miembro clase plantilla "void crow::Server<crow::Crow<>,crow::SocketAdaptor>::do_accept(void)"
+              C:\vcpkg\installed\x64-windows\include\crow\http_server.h(173,22):
+              vea la primera referencia a “crow::Server<crow::Crow<>,crow::SocketAdaptor>::do_accept” en “crow::Server<crow::Crow<>,crow::SocketAdaptor>::run”
+              C:\vcpkg\installed\x64-windows\include\crow\app.h(540,29):
+              vea la primera referencia a “crow::Server<crow::Crow<>,crow::SocketAdaptor>::run” en “crow::Crow<>::run”
+              C:\Users\ADMIN\source\repos\agent\agent\agent.cpp(192,58):
+              vea la primera referencia a “crow::Crow<>::run” en “Agent::startAgent”
+          C:\vcpkg\installed\x64-windows\include\crow\http_server.h(256,19):
+          Vea la referencia a la creación de una instancia de clase plantilla "crow::Connection<Adaptor,Handler>" que se está compilando
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+          C:\vcpkg\installed\x64-windows\include\crow\http_connection.h(470,14):
+          al compilar la función del miembro clase plantilla "void crow::Connection<Adaptor,Handler>::do_read(void)"
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+              C:\vcpkg\installed\x64-windows\include\crow\http_connection.h(101,34):
+              vea la primera referencia a “crow::Connection<Adaptor,Handler>::do_read” en “crow::Connection<Adaptor,Handler>::start::<lambda_1>::operator ()”
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+  
+C:\vcpkg\installed\x64-windows\include\crow\parser.h(127,25): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "agent.cpp")
+      C:\vcpkg\installed\x64-windows\include\crow\parser.h(127,25):
+      el contexto de creación de instancias de la plantilla (el más antiguo primero) es
+          C:\vcpkg\installed\x64-windows\include\crow\http_connection.h(597,32):
+          Vea la referencia a la creación de una instancia de clase plantilla "crow::HTTPParser<crow::Connection<Adaptor,Handler>>" que se está compilando
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+          C:\vcpkg\installed\x64-windows\include\crow\parser.h(111,14):
+          al compilar la función del miembro clase plantilla "bool crow::HTTPParser<crow::Connection<Adaptor,Handler>>::feed(const char *,int)"
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+              C:\vcpkg\installed\x64-windows\include\crow\http_connection.h(479,32):
+              vea la primera referencia a “crow::HTTPParser<crow::Connection<Adaptor,Handler>>::feed” en “crow::Connection<Adaptor,Handler>::do_read::<lambda_1>::operator ()”
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+  
+  Generando código
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 5453 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  agent.vcxproj -> C:\Users\ADMIN\source\repos\agent\x64\Release\agent.exe
+  "pwsh.exe" no se reconoce como un comando interno o externo,
+  programa o archivo por lotes ejecutable.
