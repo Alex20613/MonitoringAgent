@@ -1,14 +1,14 @@
 ﻿  agent.cpp
-  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
-  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
-  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
-  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
 C:\vcpkg\installed\x64-windows\include\crow\http_parser_merged.h(587,32): warning C4244: '=': conversión de '__int64' a 'unsigned long'; posible pérdida de datos
   (compilando archivo de origen "agent.cpp")
   
 C:\vcpkg\installed\x64-windows\include\crow\http_parser_merged.h(607,32): warning C4244: '=': conversión de '__int64' a 'unsigned long'; posible pérdida de datos
   (compilando archivo de origen "agent.cpp")
   
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
 C:\vcpkg\installed\x64-windows\include\crow\json.h(1267,35): warning C4267: 'argumento': conversión de 'size_t' a 'uint32_t'; posible pérdida de datos
   (compilando archivo de origen "agent.cpp")
   
@@ -134,11 +134,11 @@ C:\vcpkg\installed\x64-windows\include\crow\http_server.h(237,37): warning C4267
   (compilando archivo de origen "agent.cpp")
       C:\vcpkg\installed\x64-windows\include\crow\http_server.h(237,37):
       el contexto de creación de instancias de la plantilla (el más antiguo primero) es
-          C:\Users\ADMIN\source\repos\agent\agent\agent.cpp(127,21):
+          C:\Users\ADMIN\source\repos\agent\agent\agent.cpp(140,21):
           Vea la referencia a la creación de una instancia de clase plantilla "crow::Crow<>" que se está compilando
           C:\vcpkg\installed\x64-windows\include\crow\app.h(501,14):
           al compilar la función del miembro clase plantilla "void crow::Crow<>::run(void)"
-              C:\Users\ADMIN\source\repos\agent\agent\agent.cpp(192,58):
+              C:\Users\ADMIN\source\repos\agent\agent\agent.cpp(217,58):
               vea la primera referencia a “crow::Crow<>::run” en “Agent::startAgent”
           C:\vcpkg\installed\x64-windows\include\crow\app.h(534,26):
           Vea la referencia a la creación de una instancia de clase plantilla "crow::Server<crow::Crow<>,crow::SocketAdaptor>" que se está compilando
@@ -150,7 +150,7 @@ C:\vcpkg\installed\x64-windows\include\crow\http_server.h(237,37): warning C4267
               vea la primera referencia a “crow::Server<crow::Crow<>,crow::SocketAdaptor>::do_accept” en “crow::Server<crow::Crow<>,crow::SocketAdaptor>::run”
               C:\vcpkg\installed\x64-windows\include\crow\app.h(540,29):
               vea la primera referencia a “crow::Server<crow::Crow<>,crow::SocketAdaptor>::run” en “crow::Crow<>::run”
-              C:\Users\ADMIN\source\repos\agent\agent\agent.cpp(192,58):
+              C:\Users\ADMIN\source\repos\agent\agent\agent.cpp(217,58):
               vea la primera referencia a “crow::Crow<>::run” en “Agent::startAgent”
   
 C:\vcpkg\installed\x64-windows\include\crow\http_connection.h(479,75): warning C4244: 'argumento': conversión de 'unsigned __int64' a 'int'; posible pérdida de datos
@@ -163,7 +163,7 @@ C:\vcpkg\installed\x64-windows\include\crow\http_connection.h(479,75): warning C
               vea la primera referencia a “crow::Server<crow::Crow<>,crow::SocketAdaptor>::do_accept” en “crow::Server<crow::Crow<>,crow::SocketAdaptor>::run”
               C:\vcpkg\installed\x64-windows\include\crow\app.h(540,29):
               vea la primera referencia a “crow::Server<crow::Crow<>,crow::SocketAdaptor>::run” en “crow::Crow<>::run”
-              C:\Users\ADMIN\source\repos\agent\agent\agent.cpp(192,58):
+              C:\Users\ADMIN\source\repos\agent\agent\agent.cpp(217,58):
               vea la primera referencia a “crow::Crow<>::run” en “Agent::startAgent”
           C:\vcpkg\installed\x64-windows\include\crow\http_server.h(256,19):
           Vea la referencia a la creación de una instancia de clase plantilla "crow::Connection<Adaptor,Handler>" que se está compilando
@@ -214,8 +214,9 @@ C:\vcpkg\installed\x64-windows\include\crow\parser.h(127,25): warning C4267: 'in
           ]
   
   Generando código
-  Previous IPDB and IOBJ mismatch, fall back to full compilation.
-  All 5453 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  2 of 5505 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    5 functions had inline decision re-evaluated but remain unchanged
   Generación de código finalizada
   agent.vcxproj -> C:\Users\ADMIN\source\repos\agent\x64\Release\agent.exe
   "pwsh.exe" no se reconoce como un comando interno o externo,

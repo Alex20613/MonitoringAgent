@@ -3,6 +3,8 @@
 #include <cstdio>
 #include <string>
 #include <vector>
+
+
 using namespace std;
 
 class Functions {
@@ -17,6 +19,7 @@ public:
     string getBoard();
     string getBios();
     string getProcesorResponse();
+    string getOperationSystemInfo();
   
     string getMouse();
     string getKeyboard();
@@ -43,10 +46,20 @@ string Functions::responseCommand(const string& command) {
 
 string Functions::getProcesorResponse() {
     try {
-        return responseCommand("powershell -Command \"Get - WmiObject Win32_Processor | Select - Object LoadPercentage | ConvertTo - Json\" ");
+        return responseCommand("powershell -Command \"Get-WmiObject Win32_Processor | Select-Object LoadPercentage | ConvertTo-Json\" ");
     }
     catch (exception& e) {
         cout << "Error al obtener la informacion del consumo de procesador" << endl;
+        return string(e.what());
+    }
+}
+
+string Functions::getOperationSystemInfo() {
+    try {
+        return responseCommand("powershell -Command \"Get-WmiObject -Class Win32_OperatingSystem | Select-Object Caption, Version, OSArchitecture | ConvertTo-Json\" ");
+    }
+    catch (exception& e) {
+        cout << "Error al obtener la informacion del sistema operativo" << endl;
         return string(e.what());
     }
 }
@@ -137,6 +150,18 @@ Agent::Agent(string port) {
         CROW_ROUTE(this->Agente, "/")([]() {
             return "Agente Activo";
         });
+
+        CROW_ROUTE(this->Agente, "/OS")([this]() {
+            string result;
+            result = this->getOperationSystemInfo();
+            return result;
+            });
+
+        CROW_ROUTE(this->Agente, "/ProcessorConsumer")([this]() {
+            string result;
+            result = this->getProcesorResponse();
+            return result;
+            });
 
         CROW_ROUTE(this->Agente, "/processor")([this]() {
             string result;
