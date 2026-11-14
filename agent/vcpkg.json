@@ -1,0 +1,28 @@
+[
+  {
+    "status": {
+      "$": {
+        "state": "up",
+        "reason": "echo-reply",
+        "reason_ttl": "63"
+      }
+    },
+    "address": {
+      "$": {
+        "addr": "192.168.0.5",
+        "addrtype": "ipv4",
+        "error": "Agente remoto inactivo o puerto ocupado",
+        "statusAgent": "Offline",
+        "OS": "Desconocido"
+      }
+    },
+    "hostnames": "\n",
+    "times": {
+      "$": {
+        "srtt": "4316",
+        "rttvar": "5000",
+        "to": "100000"
+      }
+    }
+  }
+]

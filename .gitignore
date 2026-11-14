@@ -1,3 +1,32 @@
+# Visual Studio
 .vs/
-bin/
-obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Directorios de compilación
+**/x64/
+**/x86/
+**/Debug/
+**/Release/
+**/build/
+**/bin/
+**/obj/
+
+# Archivos compilados
+*.obj
+*.pdb
+*.ilk
+*.pch
+*.idb
+*.tlog
+*.lastbuildstate
+*.exe
+*.dll
+*.lib
+*.exp
+
+# Certificados y claves locales
+/agent/cert.pem
+/agent/key.pem

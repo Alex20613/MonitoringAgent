@@ -20,10 +20,20 @@ public:
     string getBios();
     string getProcesorResponse();
     string getOperationSystemInfo();
+    string getNameDevice();
+    string getInstalledSoftware();
+    string getTopProcesses();
+    string getNetworkInfo();
+    string getUptime();
+    string getLoggedUser();
+    string getUpdates();
+    string getAntivirus();
   
     string getMouse();
     string getKeyboard();
 };
+
+
 
 string Functions::responseCommand(const string& command) {
     try {
@@ -43,7 +53,15 @@ string Functions::responseCommand(const string& command) {
         return string(e.what());
     }
 }
-
+string Functions::getNameDevice() {
+    try {
+        return responseCommand("powershell -Command \" (Get-CimInstance Win32_ComputerSystem).Name | ConvertTo-Json\" ");
+    }
+    catch (exception& e) {
+        cout << "Error al obtener el nombre del dispositivo";
+        return string(e.what());
+    }
+}
 string Functions::getProcesorResponse() {
     try {
         return responseCommand("powershell -Command \"Get-WmiObject Win32_Processor | Select-Object LoadPercentage | ConvertTo-Json\" ");
@@ -109,7 +127,75 @@ string Functions::getHardDisk() {
         return string(e.what());
     }
 }
+string Functions::getInstalledSoftware() {
+    try {
+        return responseCommand("powershell -Command \"Get-ItemProperty 'HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' | Where-Object DisplayName | Select-Object DisplayName, DisplayVersion, Publisher | ConvertTo-Json\" ");
+    }
+    catch (exception& e) {
+        cout << "Error al obtener el software instalado: " << e.what() << endl;
+        return string(e.what());
+    }
+}
 
+string Functions::getTopProcesses() {
+    try {
+        return responseCommand("powershell -Command \"Get-Process | Sort-Object WorkingSet -Descending | Select-Object -First 10 Name, Id, @{n='MemoryMB';e={[math]::Round($_.WorkingSet/1MB,1)}} | ConvertTo-Json\" ");
+    }
+    catch (exception& e) {
+        cout << "Error al obtener los procesos: " << e.what() << endl;
+        return string(e.what());
+    }
+}
+
+string Functions::getNetworkInfo() {
+    try {
+        return responseCommand("powershell -Command \"Get-CimInstance Win32_NetworkAdapterConfiguration -Filter 'IPEnabled=true' | Select-Object Description, IPAddress, MACAddress, DefaultIPGateway, DNSServerSearchOrder | ConvertTo-Json\" ");
+    }
+    catch (exception& e) {
+        cout << "Error al obtener la informacion de red: " << e.what() << endl;
+        return string(e.what());
+    }
+}
+
+string Functions::getUptime() {
+    try {
+        return responseCommand("powershell -Command \"(Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToString('o') | ConvertTo-Json\" ");
+    }
+    catch (exception& e) {
+        cout << "Error al obtener el uptime: " << e.what() << endl;
+        return string(e.what());
+    }
+}
+
+string Functions::getLoggedUser() {
+    try {
+        return responseCommand("powershell -Command \"Get-CimInstance Win32_ComputerSystem | Select-Object UserName, Domain | ConvertTo-Json\" ");
+    }
+    catch (exception& e) {
+        cout << "Error al obtener el usuario: " << e.what() << endl;
+        return string(e.what());
+    }
+}
+
+string Functions::getUpdates() {
+    try {
+        return responseCommand("powershell -Command \"Get-HotFix | Select-Object HotFixID, Description, InstalledOn | ConvertTo-Json\" ");
+    }
+    catch (exception& e) {
+        cout << "Error al obtener las actualizaciones: " << e.what() << endl;
+        return string(e.what());
+    }
+}
+
+string Functions::getAntivirus() {
+    try {
+        return responseCommand("powershell -Command \"Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct | Select-Object displayName, productState | ConvertTo-Json\" ");
+    }
+    catch (exception& e) {
+        cout << "Error al obtener el antivirus: " << e.what() << endl;
+        return string(e.what());
+    }
+}
 string Functions::getMouse() {
     try {
        
@@ -146,9 +232,49 @@ public:
 Agent::Agent(string port) {
     try {
         this->port = port;
+        CROW_ROUTE(this->Agente, "/Software")([this]() {
+            string result;
+            result = this->getInstalledSoftware();
+            return result;
+            });
 
+        CROW_ROUTE(this->Agente, "/Processes")([this]() {
+            string result;
+            result = this->getTopProcesses();
+            return result;
+            });
+
+        CROW_ROUTE(this->Agente, "/Network")([this]() {
+            string result;
+            result = this->getNetworkInfo();
+            return result;
+            });
+
+        CROW_ROUTE(this->Agente, "/Uptime")([this]() {
+            string result;
+            result = this->getUptime();
+            return result;
+            });
+
+        CROW_ROUTE(this->Agente, "/User")([this]() {
+            string result;
+            result = this->getLoggedUser();
+            return result;
+            });
+
+        CROW_ROUTE(this->Agente, "/Updates")([this]() {
+            string result;
+            result = this->getUpdates();
+            return result;
+            });
+
+        CROW_ROUTE(this->Agente, "/Antivirus")([this]() {
+            string result;
+            result = this->getAntivirus();
+            return result;
+            });
         CROW_ROUTE(this->Agente, "/")([]() {
-            return "Agente Activo";
+            return "Ok";
         });
 
         CROW_ROUTE(this->Agente, "/OS")([this]() {
@@ -168,6 +294,11 @@ Agent::Agent(string port) {
             result = this->getProcessor(); 
             return result;
         });
+        CROW_ROUTE(this->Agente, "/Name")([this]() {
+            string result;
+            result = this->getNameDevice();
+            return result;
+            });
 
         CROW_ROUTE(this->Agente, "/ram")([this]() {
             string result;
@@ -223,7 +354,7 @@ void Agent::startAgent() {
 
 int main() {
     try {
-        Agent agente("8080");
+        Agent agente("4080");
         agente.startAgent();
     }
     catch (exception& e) {
